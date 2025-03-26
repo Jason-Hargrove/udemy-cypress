@@ -53,14 +53,9 @@ udemy-cypress/
 
 Test the MRCOOL website in different environments:
 
-#### Development Environment
 ```zsh
-npm run cypress:dev    # Tests dev.mrcool.work
-```
-
-#### Production Environment
-```zsh
-npm run cypress:prod   # Tests mrcool.work
+npm run test:dev    # Tests dev.mrcool.work
+npm run test:prod   # Tests mrcool.work
 ```
 
 The test suite (`cypress/e2e/mrcool-landing.cy.js`) verifies:

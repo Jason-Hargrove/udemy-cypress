@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress:dev": "cypress open --env url=https://dev.mrcool.work",
-    "cypress:prod": "cypress open --env url=https://mrcool.work"
+    "test:dev": "cypress open --env url=https://dev.mrcool.work",
+    "test:prod": "cypress open --env url=https://mrcool.work"
   },
   "keywords": [],
   "author": "",
