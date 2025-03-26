@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-const url = Cypress.env('baseUrl')
+const url = Cypress.env('exampleUrl')
 
 describe('Cypress E2E Testing Demo', () => {
   it('Assert Url', () => {

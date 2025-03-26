@@ -22,7 +22,7 @@ This project is part of my learning journey through the Udemy Cypress course, wh
 - Basic programming knowledge
 - JavaScript knowledge (advantageous)
 - VS Code (recommended)
-- zsh (recommended) or bash shell
+- zsh (recommended)
 
 ## 🚀 Getting Started
 
@@ -34,11 +34,6 @@ git clone https://github.com/yourusername/udemy-cypress.git
 2. Install dependencies:
 ```zsh
 npm install
-```
-
-3. Open Cypress:
-```zsh
-npx cypress open
 ```
 
 ## 📁 Project Structure
@@ -54,15 +49,26 @@ udemy-cypress/
 
 ## 🧪 Running Tests
 
-- Open Cypress Test Runner:
+### MRCOOL Website Tests
+
+Test the MRCOOL website in different environments:
+
+#### Development Environment
 ```zsh
-npx cypress open
+npm run cypress:dev    # Tests dev.mrcool.work
 ```
 
-- Run tests in headless mode:
+#### Production Environment
 ```zsh
-npx cypress run
+npm run cypress:prod   # Tests mrcool.work
 ```
+
+The test suite (`cypress/e2e/mrcool-landing.cy.js`) verifies:
+- Page loading and URL validation
+- Title verification
+- Navigation elements
+- Meta tags
+- Required assets (scripts and stylesheets)
 
 ## 📚 Learning Resources
 

@@ -1,8 +1,9 @@
 /// <reference types="cypress" />
 
-const url = Cypress.env('baseUrl')
+const url = Cypress.env('prodUrl')
+const isDev = url.includes('dev.mrcool.work')
 
-describe('MRCOOL Dev Environment Tests', () => {
+describe('MRCOOL Website Tests', () => {
   beforeEach(() => {
     // Log exceptions but don't fail the test
     Cypress.on('uncaught:exception', (err, runnable) => {
@@ -12,14 +13,19 @@ describe('MRCOOL Dev Environment Tests', () => {
         message: `Error: ${err.message}\nStack: ${err.stack}\nTest: ${runnable.title}`,
         error: err
       })
-      // Never fai!
+      // Never fail!
       return false
     })
   })
 
-  it('Should load the dev homepage', () => {
+  it('Should load the homepage', () => {
     cy.visit(url)
-    cy.url().should('include', 'dev.mrcool.work')
+    // Check URL based on environment
+    if (isDev) {
+      cy.url().should('include', 'dev.mrcool.work')
+    } else {
+      cy.url().should('include', 'mrcool.com')
+    }
   })
 
   it('Should have correct title', () => {
