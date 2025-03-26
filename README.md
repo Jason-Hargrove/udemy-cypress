@@ -65,6 +65,16 @@ The test suite (`cypress/e2e/mrcool-landing.cy.js`) verifies:
 - Meta tags
 - Required assets (scripts and stylesheets)
 
+### Example Tests
+
+Run the example tests from the Cypress course:
+
+```zsh
+npm run test:example    # Tests example.com
+```
+
+The example tests (`cypress/e2e/example.cy.js`) demonstrate basic Cypress functionality.
+
 ## 📚 Learning Resources
 
 - [Cypress Documentation](https://docs.cypress.io)
